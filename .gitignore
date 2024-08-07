@@ -11,3 +11,5 @@ test/dummy/tmp/
 gemfiles/*.gemfile.lock
 
 Gemfile.lock
+
+.DS_Store
