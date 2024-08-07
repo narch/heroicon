@@ -100,17 +100,9 @@ module Heroicon
     end
 
     def warning
-      return unless Rails.env.development?
+      return unless Rails.env.development? || Rails.env.test?
 
-      script = <<-HTML
-      <script type="text/javascript">
-      //<![CDATA[
-      console.warn("Heroicon: Failed to find heroicon: #{name}")
-      //]]>
-      </script>
-      HTML
-
-      script.strip
+      raise ArgumentError, "The icon '#{name}' does not exist."
     end
 
     class << self
