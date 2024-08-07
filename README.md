@@ -41,7 +41,7 @@ To use a icon in your views, simply use the provided view helper with the name o
 <%= heroicon "magnifying-glass" %>
 ```
 
-Heroicon comes with 3 variants, `:outline`, `:solid` and `:mini`. The default variant is `:solid`. This can be changed in `config/initializers/heroicon.rb`, which is generated during installation (See [Configuration](#configuration)). To overwrite this in the view, use
+Heroicon comes with 4 variants, `:outline`, `:solid`, `:mini` and `:micro`. The default variant is `:solid`. This can be changed in `config/initializers/heroicon.rb`, which is generated during installation (See [Configuration](#configuration)). To overwrite this in the view, use
 
 ```rb
 <%= heroicon "magnifying-glass", variant: :outline %>
@@ -62,7 +62,7 @@ After running `rails g heroicon:install` in the installation step, a configurati
 Currently there are two configuration options:
 
 - `variant`: The default variant to use if no variant is specified in the view.
-  - You can set this to either `:outline` or `:solid`. Defaults to `:solid`.
+  - You can set this to either `:outline`, `:solid`, `:mini` or `:micro`. Defaults to `:solid`.
 - `default_class`: A default class that gets applied to every icon.
   - This accepts either a String to apply to every icon, or a Hash, which applies the class based on the variant of the icon (see the example below).
   - You can disable this on a per-icon basis by passing `disable_default_class: true` in the options hash within the view.

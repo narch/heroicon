@@ -8,10 +8,6 @@ module Heroicon
       def copy_config
         template "heroicon.rb", "config/initializers/heroicon.rb"
       end
-
-      def copy_helper
-        template "heroicon_helper.rb", "app/helpers/heroicon_helper.rb"
-      end
     end
   end
 end
